@@ -1,0 +1,419 @@
+<!--
+  HOGGAS MANAR — Portfolio
+  - Mobile-first single-page site using HTML/CSS/JS
+  - Portfolio data: /portfoloi/data.json (change PORTFOLIO_JSON_PATH in js/main.js)
+  - Put images in assets/portfolio/
+  - Logo: assets/logo/mylogo.png
+  - Profile photo: assets/images/mypic.png
+  - CV: assets/CV.pdf
+  - Comments & code in English
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio website for HOGGAS MANAR, Professional Graphic Designer specializing in branding, UI/UX, and social media campaigns."
+    />
+    <title>HOGGAS MANAR — Professional Graphic Designer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#about">Skip to main content</a>
+    <noscript>
+      <section class="no-js-message">
+        <p>
+          JavaScript is disabled. Portfolio filtering, lightbox, and theme switching are unavailable,
+          but you can still download the CV and reach me at
+          <a href="mailto:manar.hoggas@univ-khenchela.dz">manar.hoggas@univ-khenchela.dz</a>
+          or call 0661613242.
+        </p>
+      </section>
+    </noscript>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <div class="brand">
+          <img src="assets/logo/mylogo.png" alt="HOGGAS MANAR logo" class="brand__logo" />
+          <div>
+            <p class="brand__eyebrow">Portfolio</p>
+            <h1 class="brand__title">HOGGAS MANAR</h1>
+            <p class="brand__subtitle">Professional Graphic Designer</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Toggle light and dark theme"
+          >
+            <span class="theme-toggle__icon" aria-hidden="true">🌗</span>
+            <span class="theme-toggle__text">Light</span>
+          </button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle__label">Menu</span>
+          </button>
+        </div>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills & Languages</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#download">Download CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Available for freelance collaborations</p>
+        <h2 id="hero-title">Design systems and visuals that lead with personality.</h2>
+        <p>
+          I craft cohesive brand identities, intuitive UI, and memorable campaigns that connect
+          audiences to stories.
+        </p>
+        <div class="hero__cta">
+          <a class="btn primary" href="#portfolio">View selected work</a>
+          <a
+            class="btn ghost"
+            href="assets/CV.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            >Download CV</a
+          >
+        </div>
+      </div>
+      <div class="hero__badge" aria-hidden="true">
+        <span>Graphic</span>
+        <span>Design</span>
+        <span>Brand</span>
+      </div>
+    </section>
+
+    <main>
+      <section id="about" class="section about">
+        <div class="section__header">
+          <h2>About</h2>
+          <p>Rooted in Khenchela with a global design mindset.</p>
+        </div>
+        <div class="about__grid">
+          <figure class="about__media">
+            <img src="assets/images/mypic.png" alt="Portrait of HOGGAS MANAR" loading="lazy" />
+            <figcaption>Khenchela, Algeria</figcaption>
+          </figure>
+          <article class="about__content">
+            <p>
+              I am fascinated by the intersection of programming, graphic design, presentation, and
+              marketing. I translate research and strategy into visuals that help businesses speak
+              clearly and confidently.
+            </p>
+            <ul class="about__details">
+              <li>
+                <span class="label">Location</span>
+                <span>Khenchela, Algeria</span>
+              </li>
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:manar.hoggas@univ-khenchela.dz">manar.hoggas@univ-khenchela.dz</a>
+              </li>
+              <li>
+                <span class="label">Phone</span>
+                <a href="tel:+213661613242">0661613242</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills">
+        <div class="section__header">
+          <h2>Skills & Languages</h2>
+          <p>Practical experience across design, branding, and front-facing communication.</p>
+        </div>
+        <div class="skills__grid">
+          <article>
+            <h3>Languages</h3>
+            <ul class="pill-list">
+              <li><span>Arabic</span><span>C2</span></li>
+              <li><span>English</span><span>C1</span></li>
+              <li><span>French</span><span>B1</span></li>
+            </ul>
+          </article>
+          <article>
+            <h3>Core Skills</h3>
+            <ul class="skill-list">
+              <li>Graphic Design</li>
+              <li>UI/UX</li>
+              <li>Branding</li>
+              <li>Social Media Design</li>
+              <li>Freelance (Fiverr)</li>
+              <li>Basic Web/Mobile design concepts</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio" aria-live="polite">
+        <div class="section__header">
+          <h2>Portfolio</h2>
+          <p>Selected collaborations loaded directly from my data feed.</p>
+        </div>
+        <div class="portfolio__controls">
+          <label class="search-field">
+            <span class="label">Search work</span>
+            <input
+              type="search"
+              id="portfolio-search"
+              name="portfolio-search"
+              placeholder="Search title or description"
+              aria-controls="portfolio-grid"
+            />
+          </label>
+          <div class="tag-filters" role="group" aria-label="Filter by tag">
+            <button type="button" class="tag-filter is-active" data-tag="all">All</button>
+          </div>
+        </div>
+        <p id="portfolio-status" class="portfolio__status" role="status">
+          Loading portfolio items…
+        </p>
+        <div id="portfolio-grid" class="portfolio__grid" data-state="loading"></div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section__header">
+          <h2>Experience</h2>
+          <p>Roles that shaped my collaborative and leadership approach.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <article>
+              <h3>Club President</h3>
+              <p class="meta">MASTER OF PROGRAMMING — 2025 · Khenchela</p>
+              <ul>
+                <li>Led workshops connecting graphic design thinking with coding sprints.</li>
+                <li>Mentored cross-functional teams on visual storytelling.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Website & Mobile Application Programmer</h3>
+              <p class="meta">Freelance — 2025</p>
+              <ul>
+                <li>Partnered with developers to align UI handoff documentation.</li>
+                <li>Ensured accessibility and responsive behavior from mockups.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Graphic Design</h3>
+              <p class="meta">Khenchela — 2024</p>
+              <ul>
+                <li>Produced campaign visuals for local initiatives.</li>
+                <li>Maintained brand asset libraries.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Logo Design</h3>
+              <p class="meta">Khenchela — 2024</p>
+              <ul>
+                <li>Delivered modular logo systems with usage guidelines.</li>
+                <li>Collaborated closely with marketing leads.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>UI/UX assistance</h3>
+              <p class="meta">Collaborative projects — year varies</p>
+              <ul>
+                <li>Assisted with user flows and component states.</li>
+                <li>Documented design decisions for developers.</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="education" class="section education">
+        <div class="section__header">
+          <h2>Education</h2>
+        </div>
+        <div class="education__list">
+          <article>
+            <h3>Bachelor’s degree in Computer Science</h3>
+            <p class="meta">Abbas Laghrour University of Khenchela — 2023</p>
+          </article>
+          <article>
+            <h3>Baccalaureate Certificate — Computer Engineering</h3>
+            <p class="meta">University of Constantine — 2022</p>
+          </article>
+          <article>
+            <h3>Baccalaureate degree — Natural and Life Sciences</h3>
+            <p class="meta">AGGOUN SALEH, EL HAMMA — 2023</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="section download">
+        <div class="section__header">
+          <h2>Download CV</h2>
+          <p>Full resume with selected case studies and references.</p>
+        </div>
+        <a
+          class="btn primary large"
+          href="assets/CV.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          >Download CV</a
+        >
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section__header">
+          <h2>Contact</h2>
+          <p>Use the form below or reach me directly on your preferred channel.</p>
+        </div>
+        <div class="contact__grid">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formsubmit.co/manar.hoggas@univ-khenchela.dz"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="Portfolio inquiry from HOGGAS MANAR site" />
+            <input type="hidden" name="_next" value="https://formsubmit.co/thank-you" />
+            <input type="hidden" name="_captcha" value="false" />
+            <label>
+              <span class="label">Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span class="label">Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span class="label">Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn primary">Send via FormSubmit</button>
+          </form>
+          <article class="contact__details">
+            <h3>Direct</h3>
+            <ul>
+              <li>
+                <span>Email</span>
+                <a href="mailto:manar.hoggas@univ-khenchela.dz">manar.hoggas@univ-khenchela.dz</a>
+              </li>
+              <li>
+                <span>Phone</span>
+                <a href="tel:+213661613242">+213 661 613 242</a>
+              </li>
+              <li>
+                <span>Location</span>
+                <p>Khenchela, Algeria</p>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/manar-hoggas-a06b40327"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/manar-hoggas-a06b40327</a
+                >
+              </li>
+              <li>
+                <span>MOP Club</span>
+                <a
+                  href="https://t.me/mop_club_univ_khenchela"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >t.me/mop_club_univ_khenchela</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p>© <span id="year">2025</span> HOGGAS MANAR. Crafted with intent.</p>
+        <p>Prefer reduced motion settings are respected throughout the site.</p>
+      </div>
+      <ul class="social">
+        <li>
+          <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+        </li>
+        <li>
+          <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
+        </li>
+        <li><a href="https://fiverr.com" target="_blank" rel="noopener noreferrer">Fiverr</a></li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/manar-hoggas-a06b40327"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://t.me/mop_club_univ_khenchela"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MOP Club</a
+          >
+        </li>
+      </ul>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </footer>
+
+    <div
+      id="lightbox"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+      aria-hidden="true"
+    >
+      <div class="lightbox__content">
+        <button class="lightbox__close" type="button" aria-label="Close lightbox">×</button>
+        <div class="lightbox__media">
+          <img src="" alt="" id="lightbox-image" loading="lazy" />
+        </div>
+        <div class="lightbox__body">
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-description"></p>
+          <ul id="lightbox-tags" class="pill-list"></ul>
+          <p id="lightbox-link-wrapper" class="lightbox__link"></p>
+        </div>
+        <div class="lightbox__controls">
+          <button class="lightbox__prev" type="button" aria-label="Previous project">←</button>
+          <button class="lightbox__next" type="button" aria-label="Next project">→</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
+
